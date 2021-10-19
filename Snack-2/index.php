@@ -40,6 +40,8 @@
             } else if ($name != null && $mail != null && $age != null) {
                 // uso questo else if al posto di else per fare scomparire la scritta Accesso negato di default sin dall'inizio 
                 echo "<strong>Accesso negato</strong>";
+            } else {
+                echo "Tutti i campi devono essere compilati.";
             }
         ?>
     </p>
