@@ -1,6 +1,11 @@
 <!-- Passare come parametri GET name, mail e age e verificare (cercando i metodi che non conosciamo nella documentazione) che name sia più lungo di 3 caratteri, che mail contenga un punto e una chiocciola e che age sia un numero. Se tutto è ok stampare “Accesso riuscito”, altrimenti “Accesso negato” -->
 
 <?php
+    // si presume che l'utente abbia già inserito dei dati che sono arrivati al backend
+    if ( empty($_GET["name"]) || empty($_GET["name"]) || empty($_GET["name"]) ) {
+        echo "Attenzione! Devi compilare tutti i campi obbligatoriamente!";
+    }
+
     $name = $_GET["name"];
     $mail = $_GET["mail"];
     $age = $_GET["age"];
@@ -8,8 +13,7 @@
     // stampo all'interno del codice PHP 
     // if (strlen($name) > 3 && strpos($mail, ".") && strpos($mail, "@") && is_numeric($age)) {
     //     echo "Accesso riuscito";
-    // } else if ($name != null && $mail!= null && $age != null) {
-    //     // uso questo else if al posto di else per fare scomparire la scritta Accesso negato di default sin dall'inizio 
+    // } else {
     //     echo "Accesso negato";
     // }
 ?>
@@ -37,11 +41,8 @@
         <?php
             if (strlen($name) > 3 && strpos($mail, ".") && strpos($mail, "@") && is_numeric($age)) {
                 echo "<strong>Accesso riuscito</strong>";
-            } else if ($name != null && $mail != null && $age != null) {
-                // uso questo else if al posto di else per fare scomparire la scritta Accesso negato di default sin dall'inizio 
-                echo "<strong>Accesso negato</strong>";
             } else {
-                echo "Tutti i campi devono essere compilati.";
+                echo "<strong>Accesso negato</strong>";
             }
         ?>
     </p>
