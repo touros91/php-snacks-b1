@@ -38,10 +38,6 @@
             ]
         ],
     ];
-    //     foreach($posts as $date => $post) {
-    //         <li> echo $date ;</li>
-    //     }
-    // </ul>
 ?>
 
 <ul>
@@ -49,7 +45,12 @@
         <li><?php echo $date; ?>
             <ul>
                 <?php foreach($articles as $article){ ?>
-                    <li><?php echo "<h1>{$article["title"]}</h1>"; echo "<h3><em>Autore: {$article["author"]}</em></h3>"; echo "<p>{$article["text"]}</p>";?></li>
+                    <li><?php 
+                        echo "<h1>{$article["title"]}</h1>"; 
+                        echo "<h3><em>Autore: {$article["author"]}</em></h3>"; 
+                        echo "<p>{$article["text"]}</p>";
+                        ?>
+                    </li>
                 <?php } ?> 
             </ul>
         </li>
