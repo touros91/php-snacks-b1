@@ -45,11 +45,11 @@
 ?>
 
 <ul>
-    <?php foreach($posts as $date => $posts) { ?>
+    <?php foreach($posts as $date => $articles) { ?>
         <li><?php echo $date; ?>
             <ul>
-                <?php foreach($posts as $post => $value){ ?>
-                    <li><?php echo "<h1>{$value["title"]}</h1>"; echo "<h3>{$value["author"]}</h3>"; echo "<p>{$value["text"]}</p>";?></li>
+                <?php foreach($articles as $article){ ?>
+                    <li><?php echo "<h1>{$article["title"]}</h1>"; echo "<h3><em>Autore: {$article["author"]}</em></h3>"; echo "<p>{$article["text"]}</p>";?></li>
                 <?php } ?> 
             </ul>
         </li>
